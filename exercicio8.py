@@ -6,3 +6,12 @@ from modulo_matriz import preencher_matriz, exibe_matriz
 
 matriz = preencher_matriz(4, 4)
 exibe_matriz(matriz)
+
+transposta = []
+for i in range(len(matriz)):
+    linha = []
+    for j in range(len(matriz[0])):
+        linha.append(matriz[j][i])
+    transposta.append(linha)
+
+exibe_matriz(transposta)
