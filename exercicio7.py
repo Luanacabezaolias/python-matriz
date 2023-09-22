@@ -2,10 +2,15 @@
 um número e faça uma busca na matriz por esse número, informando a posição onde ele se encontra 
 (índice da linha e índice da coluna). Se o número aparecer mais de uma vez na matriz, exiba todas as 
 posições onde ele foi encontrado.'''
-matriz = []
-for i in range(5):      # linha
-    lista = []      
-    for j in range(4):      # coluna
-        n = int(input("Insira o número: "))
-        lista.append(n)
-    matriz.append(lista)
+
+from modulo_matriz import preencher_matriz, exibe_matriz
+
+matriz = preencher_matriz(5, 4)
+exibe_matriz(matriz)
+
+numero = int(input("digite um valor: "))
+
+for i in range(len(matriz)):
+    for j in range(len(matriz[0])):
+        if matriz[i][j] == numero:
+            print(f'Linha: {i} coluna: {j}')
