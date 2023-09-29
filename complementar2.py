@@ -14,7 +14,13 @@ for i in range(len(matriz)):
     transposta.append(linha)
 exibe_matriz(transposta)
 
-if matriz == transposta:
+for i in range(len(matriz)):
+    for j in range(len(matriz[0])):
+        if matriz[i][j] != transposta[i][j]:
+            simetrica = False
+simetrica = True
+
+if simetrica:
     print("A matriz é simétrica.")
 else: 
     print("A matriz é assimétrica.")
